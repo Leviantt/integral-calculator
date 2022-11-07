@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интеграл онлайн</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="./index.html" class="current-page">Главная</a></li>
+                    <li><a href="./about.html">О методе</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Вычисление определенного интеграла методом трапеций</h1>
+            <form id="form">
+                <div class="interval">
+                    <input type="number" placeholder="25" id="b" step="any">
+                    <svg width="23" height="73" viewBox="0 0 53 133" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M44.6105 0.247498C42.698 0.846219 40.7257 2.70227 39.112 5.4564C36.6018 9.70734 34.8686 14.9761 31.8206 27.3697C26.4416 49.283 22.7959 66.9454 18.9111 89.7568C15.3252 110.832 12.9346 121.669 10.5439 127.117C9.88649 128.734 8.57164 130.65 7.91421 131.129C7.19702 131.667 5.40404 131.608 4.20873 131.069C3.01341 130.47 2.83411 130.231 3.5513 130.051C6.0017 129.572 6.7189 126.339 4.68685 124.782C4.14896 124.363 3.85013 124.303 2.89388 124.303C1.99739 124.303 1.69856 124.363 1.1009 124.782C0.204413 125.501 -0.0944169 126.339 0.0251132 127.656C0.383709 131.667 5.40404 134.242 9.22906 132.386C10.7232 131.667 12.6357 129.692 13.831 127.596C16.5205 123.106 18.1939 117.837 21.6006 103.827C26.86 81.9733 30.2069 65.7479 34.0319 43.2359C37.6179 22.1608 40.0683 11.3239 42.3991 5.8755C43.1163 4.31882 44.3714 2.34303 45.0886 1.86405C45.8058 1.38507 47.5988 1.38507 48.7343 1.92392C49.9296 2.52265 50.1089 2.76214 49.3918 2.94175C47.0011 3.42074 46.2839 6.65385 48.2562 8.21053C48.8539 8.62963 49.1527 8.74938 50.0492 8.74938C51.0054 8.74938 51.3043 8.62963 51.8422 8.21053C52.7386 7.49206 53.0972 6.65385 52.9777 5.39652C52.6789 1.74431 48.316 -0.830205 44.6105 0.247498Z" fill="black"/>
+                    </svg>                        
+                    <input type="number" placeholder="7" id="a" step="any">
+                </div>
+                <div class="input-group">
+                    <label for="function-input">Интегрируемая функция</label>
+                    <input type="text" placeholder="x^3 - 2*x^2 + 5" id="mathExpression">
+                </div>
+                <div class="input-group">
+                    <label for="function-input">Точность</label>
+                    <input type="number" placeholder="0.01" id="precision" step="any">
+                </div>
+                <button type="submit" class="btn">Вычислить</button>
+            </form>
+            <div class="result-container">
+                <div class="input-group result" id="result-group">
+                    <label for="function-input">Результат</label>
+                    <input type="text"  readonly id="result">
+                </div>
+                <span class="loader invisible" id="loader"></span>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
