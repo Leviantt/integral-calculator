@@ -7,7 +7,7 @@ import (
 	"github.com/benpate/convert"
 )
 
-// creates functions, that calculates math expression depending on x parameter
+// creates function that calculates math expression depending on x parameter
 func MakeCalculate(expression string) func(x float64) float64 {
 	_expression, _ := govaluate.NewEvaluableExpression(expression)
 	parameters := make(map[string]interface{}, 8)
